@@ -50,8 +50,8 @@ resource "aws_autoscaling_group" "dfsc_front_end" {
   desired_capacity     = 0
 
   vpc_zone_identifier = [
-    aws_subnet.dfsc-public-1a.id,
-    aws_subnet.dfsc-public-1b.id
+    aws_subnet.dfsc_public_1a.id,
+    aws_subnet.dfsc_public_1b.id
   ]
   target_group_arns = [aws_alb_target_group.dfsc_front_end_tg.arn]
   lifecycle {
@@ -73,8 +73,8 @@ resource "aws_autoscaling_group" "dfsc_back_end" {
   desired_capacity     = 0
 
   vpc_zone_identifier = [
-    aws_subnet.dfsc-private-1a.id,
-    aws_subnet.dfsc-private-1b
+    aws_subnet.dfsc_private_1a.id,
+    aws_subnet.dfsc_private_1b
   ]
   target_group_arns = [aws_alb_target_group.dfsc_back_end_tg]
   lifecycle {

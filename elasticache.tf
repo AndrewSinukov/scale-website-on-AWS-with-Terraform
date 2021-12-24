@@ -26,8 +26,8 @@ resource "aws_security_group" "dfsc_elasticache_sg" {
 resource "aws_elasticache_subnet_group" "dfsc_elasticache_subnet" {
   name = "DFSC-Elasticache-Subnet-Group"
   subnet_ids = [
-    aws_subnet.dfsc-private-1a.id,
-    aws_subnet.dfsc-private-1b.id
+    aws_subnet.dfsc_private_1a.id,
+    aws_subnet.dfsc_private_1b.id
   ]
 }
 

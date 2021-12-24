@@ -29,8 +29,8 @@ resource "aws_alb" "dfsc_alb" {
   load_balancer_type = "application"
   security_groups    = [aws_security_group.dfsc_alb_sg.id]
   subnets = [
-    aws_subnet.dfsc-public-1a.id,
-    aws_subnet.dfsc-public-1b.id
+    aws_subnet.dfsc_public_1a.id,
+    aws_subnet.dfsc_public_1b.id
   ]
   enable_deletion_protection = false
   tags = {

@@ -15,7 +15,7 @@ resource "aws_lb_listener_rule" "dfsc_admin_https" {
   priority     = 100
   action {
     type             = "forward"
-    target_group_arn = aws_alb_target_group.dfsc_back-end-tg.arn
+    target_group_arn = aws_alb_target_group.dfsc_back_end_tg.arn
   }
   condition {
     path_pattern {

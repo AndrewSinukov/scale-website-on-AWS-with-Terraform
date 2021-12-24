@@ -35,7 +35,7 @@ resource "aws_efs_file_system" "dfsc_efs" {
 
 resource "aws_efs_mount_target" "dfsc_mount_private_1a" {
   file_system_id = aws_efs_file_system.dfsc_efs.id
-  subnet_id      = aws_subnet.dfsc-private-1a.id
+  subnet_id      = aws_subnet.dfsc_private_1a.id
   security_groups = [
     aws_security_group.dfsc_efs_sg.id
   ]
@@ -43,7 +43,7 @@ resource "aws_efs_mount_target" "dfsc_mount_private_1a" {
 
 resource "aws_efs_mount_target" "dfsc_mount_private_1b" {
   file_system_id = aws_efs_file_system.dfsc_efs.id
-  subnet_id      = aws_subnet.dfsc-private-1b.id
+  subnet_id      = aws_subnet.dfsc_private_1b.id
   security_groups = [
     aws_security_group.dfsc_efs_sg.id
   ]

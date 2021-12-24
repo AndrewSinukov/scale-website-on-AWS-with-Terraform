@@ -26,8 +26,8 @@ resource "aws_security_group" "dfsc_db_sg" {
 resource "aws_db_subnet_group" "dfsc_db_subnet" {
   name = "dfsc-database-subnet-group"
   subnet_ids = [
-    aws_subnet.dfsc-private-1a.id,
-    aws_subnet.dfsc-private-1b.id
+    aws_subnet.dfsc_private_1a.id,
+    aws_subnet.dfsc_private_1b.id
   ]
   tags = {
     Name      = "Dfsc Subnet Group"
